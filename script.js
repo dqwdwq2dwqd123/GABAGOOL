@@ -205,7 +205,7 @@ function revealMessage() {
     `Starting by becoming the mould poop.\n\n` +
     `Not only living up to your expectations poop,\n` +
     `I am going to exceed them.\n\n` +
-    `It has always and will always be you Maria🤍`;
+    `It has always and will always be you Maria, I love you so so so much darling, thank you for this 🤍`;
 
   revealText.textContent = "";
   typeCinematic(message, revealText);
@@ -255,3 +255,4 @@ function escapeHtml(str) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
+
