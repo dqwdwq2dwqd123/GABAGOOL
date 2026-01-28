@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For You 🤍</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- INTRO SCREEN -->
+  <div id="introScreen" class="app">
+    <header>
+      <h1>HEY POOPPP 🤍</h1>
+      <p>Today darling we are gonna play a "What will Zakria do (also what should he have done)" <br>Tap start when you’re ready.</p>
+    </header>
+
+    <div class="intro-card">
+      <p class="tiny">This is to showcase that I can and will change poop, I will become the person you deserve poop. Everything that we have spoken about has been taken on board and will be reflected through my actions in the future poop.</p>
+      <button id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <!-- QUIZ APP -->
+  <div class="app hidden" id="quizApp">
+    <header>
+      <h1>Quiz 🤍</h1>
+      <p id="subtitle"></p>
+    </header>
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="progressLabel">Question 1 of 1</span>
+        <span id="scoreLabel">Score: 0</span>
+      </div>
+      <div class="progress-track" aria-label="Progress">
+        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <main id="quiz"></main>
+    <button id="nextBtn" disabled>Next</button>
+  </div>
+
+  <!-- FINAL REVEAL SCREEN -->
+  <div id="revealScreen" class="hidden">
+    <div class="reveal-card">
+      <h2>One Last Thing 🤍</h2>
+      <p id="revealText"></p>
+
+      <div class="reveal-footer">
+        <button id="restartBtn" class="ghost">Replay</button>
+      </div>
+    </div>
+    <div class="hearts"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

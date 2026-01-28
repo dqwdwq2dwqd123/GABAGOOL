@@ -1,0 +1,210 @@
+:root {
+  --pink: #ffd6e8;
+  --pink-dark: #ff9fcf;
+  --bg: #fff6fa;
+  --text: #5a2a44;
+  --card-shadow: 0 10px 30px rgba(255, 159, 207, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  padding: 24px;
+}
+
+header {
+  text-align: centre;
+  margin-bottom: 18px;
+}
+
+header h1 {
+  margin: 0 0 6px 0;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.hidden { display: none; }
+
+/* Intro card */
+.intro-card {
+  background: white;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: var(--card-shadow);
+  margin-top: 18px;
+  text-align: centre;
+}
+
+.tiny {
+  margin: 0 0 14px 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: var(--pink-dark);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.08s ease;
+}
+
+button:active { transform: scale(0.99); }
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(90, 42, 68, 0.2);
+}
+
+/* Quiz card */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  animation: fadeIn 0.4s ease;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Progress */
+.progress-wrap {
+  background: white;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: var(--card-shadow);
+  margin: 16px 0;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 159, 207, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--pink-dark);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+
+/* Options */
+.option {
+  background: var(--pink);
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: centre;
+  user-select: none;
+}
+
+.option:hover {
+  background: var(--pink-dark);
+  color: white;
+}
+
+.option.selected {
+  background: var(--pink-dark);
+  color: white;
+}
+
+/* Reveal screen */
+#revealScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #fff0f7, #ffd6e8);
+  display: flex;
+  align-items: centre;
+  justify-content: centre;
+  padding: 20px;
+}
+
+/* IMPORTANT: make hidden override the ID selector */
+#revealScreen.hidden {
+  display: none;
+}
+
+.reveal-card {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  max-width: 420px;
+  width: 100%;
+  text-align: centre;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.reveal-card h2 {
+  margin: 0 0 16px 0;
+}
+
+#revealText {
+  font-size: 18px;
+  line-height: 1.6;
+  min-height: 140px;
+  margin: 0;
+}
+
+.reveal-footer {
+  margin-top: 18px;
+}
+
+/* Floating hearts */
+.hearts span {
+  position: absolute;
+  bottom: -20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
